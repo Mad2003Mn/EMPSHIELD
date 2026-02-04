@@ -1,0 +1,373 @@
+/* --- COVER PAGE STYLES --- */
+.cover-page {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  /* Replace with your actual image URL or local path */
+  background-image: url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b'); 
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+.overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(24, 38, 67, 0.85); /* Dark tint for text readability */
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+.logo-animation {
+  font-size: 5rem;
+  margin-bottom: 20px;
+  animation: pulse 2s infinite ease-in-out;
+}
+
+.hero-title {
+  font-size: 4rem;
+  letter-spacing: 10px;
+  margin: 0;
+  color: #3b82f6;
+  text-shadow: 0 0 20px rgba(59, 130, 246, 0.5);
+}
+
+.hero-subtitle {
+  font-size: 1.2rem;
+  letter-spacing: 10px;
+  margin: 0;
+  color: #96a9c7;
+  text-shadow: 0 0 20px rgba(59, 130, 246, 0.5);
+}
+
+.start-btn {
+  margin-top: 40px;
+  padding: 15px 40px;
+  font-size: 1.2rem;
+  background: transparent;
+  color: #3b82f6;
+  border: 2px solid #3b82f6;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.start-btn:hover {
+  background: #3b82f6;
+  color: #ffffff;
+  box-shadow: 0 0 30px rgba(59, 130, 246, 0.8);
+}
+
+/* --- ANIMATIONS --- */
+@keyframes pulse {
+  0% { transform: scale(1); filter: drop-shadow(0 0 0px #3b82f6); }
+  50% { transform: scale(1.1); filter: drop-shadow(0 0 15px #3b82f6); }
+  100% { transform: scale(1); filter: drop-shadow(0 0 0px #3b82f6); }
+}
+
+.fade-in {
+  animation: fadeIn 0.8s ease-in forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* --- LOGIN & DATABASE (Basic Clean Layout) --- */
+.login-stage {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #0f172a;
+}
+
+.login-card {
+  background: #1e293b;
+  padding: 40px;
+  border-radius: 12px;
+  width: 350px;
+  border: 1px solid #334155;
+}
+
+.login-card input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  background: #0f172a;
+  border: 1px solid #334155;
+  color: white;
+  border-radius: 4px;
+  box-sizing: border-box; /* cite: 3 */
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background: #1e293b;
+  border-bottom: 2px solid #3b82f6;
+}
+
+.logout-btn {
+  background: #ef4444;
+  border: none;
+  color: white;
+  padding: 5px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+/* Layout for the Database Stage */
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: 350px 1fr;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.employee-list-panel {
+  background: #1e293b;
+  border-radius: 12px;
+  padding: 20px;
+  border: 1px solid #405674;
+}
+
+.emp-item {
+  padding: 15px;
+  background: #1c2a4c;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+  display: flex;
+  flex-direction: column;
+}
+
+.emp-item:hover { border-left: 4px solid #367ae7; background: #1e293b; }
+.emp-item.active { border-left: 4px solid #3b82f6; background: #334155; }
+
+.emp-item span { font-size: 0.8rem; color: #94a3b8; }
+
+/* Profile Card Styling */
+.profile-card {
+  background: #1e293b;
+  border-radius: 12px;
+  padding: 30px;
+  border: 1px solid #334155;
+}
+
+.profile-header {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #334155;
+  margin-bottom: 25px;
+  padding-bottom: 15px;
+}
+
+.emp-id-tag {
+  background: #3b82f6;
+  padding: 5px 12px;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.profile-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.info-box {
+  background: #3658a7;
+  padding: 15px;
+  border-radius: 6px;
+}
+
+.info-box strong {
+  display: block;
+  font-size: 0.75rem;
+  color: #3b82f6;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+
+.info-box p { margin: 0; font-size: 1.1rem; }
+.full-width { grid-column: span 2; }
+
+.secure-text {
+  font-family: monospace;
+  color: #10b981; /* Green color for NIC to imply security */
+}
+
+.empty-state {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  color: #475569;
+  border: 2px dashed #334155;
+  border-radius: 12px;
+}
+.list-container {
+  max-height: 500px;
+  overflow-y: auto;
+  padding-right: 10px;
+}
+/* Selection Stage Styling */
+.selection-stage {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(circle at center, #1e293b 0%, #0f172a 100%);
+}
+
+.selection-card {
+  background: #1e293b;
+  padding: 40px;
+  border-radius: 12px;
+  border: 1px solid #334155;
+  width: 100%;
+  max-width: 450px;
+  text-align: center;
+}
+
+.select-group {
+  text-align: left;
+  margin-bottom: 25px;
+}
+
+.select-group label {
+  display: block;
+  color: #3b82f6;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.select-group select {
+  width: 100%;
+  padding: 12px;
+  background: #0f172a;
+  border: 1px solid #334155;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  outline: none;
+}
+
+.active-filters {
+  font-size: 0.9rem;
+  color: #94a3b8;
+}
+
+.filter-tag {
+  color: #3b82f6;
+  font-weight: bold;
+}
+/* Fixed Back Button for Login/Selection Stages */
+.back-btn-fixed {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  background: transparent;
+  color: #94a3b8;
+  border: 1px solid #334155;
+  padding: 8px 18px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s ease;
+  z-index: 10;
+}
+
+.back-btn-fixed:hover {
+  color: #3b82f6;
+  border-color: #3b82f6;
+  background: rgba(59, 130, 246, 0.1);
+}
+
+/* Navbar Back Button */
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.back-btn-nav {
+  background: #334155;
+  color: #f1f5f9;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: 0.2s;
+}
+
+.back-btn-nav:hover {
+  background: #475569;
+}
+/* Add to src/App.css */
+
+.login-card h2 {
+  color: #3b82f6;
+  margin-bottom: 5px;
+}
+
+.login-card p {
+  font-size: 0.8rem;
+  color: #64748b;
+  margin-bottom: 20px;
+}
+
+/* Make the inputs look like a secure terminal */
+.login-card input {
+  border: 1px solid #334155;
+  transition: all 0.3s ease;
+}
+
+.login-card input:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 10px rgba(59, 130, 246, 0.2);
+  outline: none;
+}
+/* Add to src/App.css */
+.role-badge {
+  padding: 5px 12px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.role-admin { background: #ef4444; color: white; } /* Red for high clearance */
+.role-manager { background: #f59e0b; color: white; } /* Orange for medium */
+/* Role Badges */
+.role-badge {
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: bold;
+}
+.role-admin { background: #ef4444; color: white; border: 1px solid #7f1d1d; }
+.role-manager { background: #f59e0b; color: white; border: 1px solid #78350f; }
+
+/* Navigation & Back Buttons */
+.nav-left { display: flex; align-items: center; gap: 20px; }
+.back-btn-fixed { position: absolute; top: 30px; left: 30px; background: #1e293b; color: #94a3b8; border: 1px solid #334155; padding: 8px 15px; border-radius: 5px; cursor: pointer; }
+.back-btn-nav { background: #334155; color: white; border: none; padding: 5px 12px; border-radius: 4px; cursor: pointer; }
+
+/* Security Text */
+.secure-text { font-family: monospace; color: #10b981; }
+.warning-box { border: 1px solid #ef4444; background: rgba(239, 68, 68, 0.05); }

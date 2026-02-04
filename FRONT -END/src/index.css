@@ -1,0 +1,139 @@
+/* :root {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #0f172a; /* Deep navy/black */
+  color: #f1f5f9;
+}
+
+body {
+  margin: 0;
+  display: block;
+  min-height: 100vh;
+}
+
+/* Common Layout */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Navigation */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: #1e293b;
+  border-bottom: 2px solid #3b82f6; /* Blue "Shield" accent */
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #3b82f6;
+  letter-spacing: 1px;
+}
+
+/* Tables for Data */
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #1e293b;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-top: 20px;
+}
+
+.data-table th, .data-table td {
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid #334155;
+}
+
+.data-table th {
+  background: #334155;
+  color: #3b82f6;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+
+/* Buttons */
+.btn {
+  padding: 8px 16px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: opacity 0.2s;
+}
+
+.btn-primary { background: #3b82f6; color: white; }
+.btn-danger { background: #ef4444; color: white; }
+
+/* Status Badges */
+.badge {
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 0.75rem;
+}
+.badge-admin { background: #9333ea; color: white; }
+.badge-manager { background: #059669; color: white; } */
+/* Tab Menu for Switching Views */
+.tab-menu {
+  display: flex;
+  gap: 15px;
+}
+
+.tab-btn {
+  background: transparent;
+  border: none;
+  color: #94a3b8;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 0.95rem;
+  border-bottom: 3px solid transparent;
+  transition: 0.3s ease;
+}
+
+.tab-btn:hover { color: #3b82f6; }
+
+.tab-btn.active {
+  color: #3b82f6;
+  border-bottom: 3px solid #3b82f6;
+}
+
+/* More Info Specific Styling */
+.status-highlight {
+  color: #a855f7; /* Purple for clearance levels */
+  font-weight: bold;
+}
+
+.warning-box {
+  border: 1px solid #ef4444;
+  background: rgba(239, 68, 68, 0.05) !important;
+}
+
+.warning-box strong { color: #ef4444 !important; }
+
+.warning-box p { font-size: 0.85rem !important; font-style: italic; }
+/* Update info-box to be light and visible */
+.info-box {
+  background: #f8fafc; /* Light visible color */
+  color: #1e293b;      /* Dark text for visibility */
+  padding: 15px;
+  border-radius: 6px;
+  border: 1px solid #cbd5e1;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05); /* Added shadow for visibility */
+}
+
+/* Security Lock Warning */
+.login-card h2.locked-title {
+  color: #ef4444;
+}
+
+.login-form input:disabled {
+  background: #334155;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
